@@ -25,7 +25,7 @@ def ingest_season(year: int) -> None:
             try:
                 session = get_session(year, event.RoundNumber, s_name)
                 # non carico la telemetria per ridurre memoria
-                session.load(telemetry=False)
+                session.load(telemetry=True)
                 print("OK")
             except Exception as exc:  # noqa: PERF203 - eccezioni ampie ma loggate
                 print(f"SKIP ({exc})")
