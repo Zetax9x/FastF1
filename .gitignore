@@ -9,6 +9,7 @@ exp*.py
 
 # environments for development and local test runs
 venv/
+.venv/
 act/
 .actrc
 
@@ -34,5 +35,8 @@ docs/gen_modules/
 docs/api_reference/api_autogen/
 
 # all variations of cache directories
-*_cache/
+
 .DS_Store
+
+# local data and db files
+*.sqlite

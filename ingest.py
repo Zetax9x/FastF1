@@ -9,8 +9,9 @@ fastf1.Cache.enable_cache("fastf1_cache")
 
 
 # stagioni e sessioni da pre-caricare in cache
-YEARS = [2025, 2026]
-SESSION_NAMES = ["Q", "R"]  # solo qualifica e gara per ridurre dati/memoria
+YEARS = [2026]
+# tutte le sessioni standard (Practice 1-3, Qualifying, Sprint, Race)
+SESSION_NAMES = ["FP1", "FP2", "FP3", "Q", "S", "R"]
 
 
 def ingest_season(year: int) -> None:
