@@ -6,6 +6,7 @@ import fastf1
 from fastf1 import get_event, get_event_schedule, get_events_remaining, get_session, plotting
 from fastf1 import ergast as ff1_ergast
 from fastapi import FastAPI, HTTPException, Query
+from fastapi.middleware.cors import CORSMiddleware
 
 
 # usa la stessa cartella di cache dello script di ingest
@@ -13,6 +14,14 @@ fastf1.Cache.enable_cache("fastf1_cache")
 
 
 app = FastAPI(title="FastF1 API", version="1.0.0")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 # ===== Helpers comuni ======================================================
