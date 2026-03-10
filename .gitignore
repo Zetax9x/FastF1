@@ -35,7 +35,7 @@ docs/gen_modules/
 docs/api_reference/api_autogen/
 
 # all variations of cache directories
-
+fastf1_cache/
 .DS_Store
 
 # local data and db files
